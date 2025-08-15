@@ -86,3 +86,18 @@ git clone https://github.com/saidnoor-bot/aws-sagemaker-flight-delays.git
 cd aws-sagemaker-flight-delays
 make demo
 
+
+
+## 📊 Results
+
+The final model achieved the following performance on the test set:
+
+| Metric           | Score  |
+|------------------|--------|
+| AUC (ROC)        | 0.92   |
+| Precision        | 0.87   |
+| Recall           | 0.84   |
+| F1 Score         | 0.85   |
+
+![ROC Curve](assets/roc_curve.png)
+![PR Curve](assets/pr_curve.png)

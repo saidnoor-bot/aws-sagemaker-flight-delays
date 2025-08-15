@@ -1,4 +1,7 @@
----
+# ✈️ Flight Delay Risk — ML to Cloud
+[![CI](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml/badge.svg)](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
+
 
 ## 📊 Metrics & Results
 ![ROC Curve](assets/roc_curve.png)

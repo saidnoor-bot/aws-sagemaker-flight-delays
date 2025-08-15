@@ -1,14 +1,15 @@
-
 # ✈️ Flight Delay Risk — ML to Cloud
-[![CI](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml/badge.svg)](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange) ![AWS SageMaker](https://img.shields.io/badge/AWS--SageMaker-success) ![MLOps](https://img.shields.io/badge/MLOps-CI%2FCD-green)
 
-
-  
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)  
-![Python](https://img.shields.io/badge/Python-3.9%2B-blue)  
-![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)  
-![AWS SageMaker](https://img.shields.io/badge/AWS--SageMaker-success)  
+[![CI](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml/badge.svg)](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)
+![AWS SageMaker](https://img.shields.io/badge/AWS--SageMaker-success)
 ![MLOps](https://img.shields.io/badge/MLOps-CI%2FCD-green)
+
+A production-grade machine learning project that predicts the probability of U.S. flight delays.  
+Built for real-world deployment with a focus on **scalability, security, and maintainability**.
+
 ## Why This Project
 This project is designed to **impress recruiters** and **demonstrate real-world ML skills**:
 - Predicts U.S. flight delays using real FAA data

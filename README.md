@@ -6,6 +6,14 @@
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)  
 ![AWS SageMaker](https://img.shields.io/badge/AWS--SageMaker-success)  
 ![MLOps](https://img.shields.io/badge/MLOps-CI%2FCD-green)
+## Why This Project
+This project is designed to **impress recruiters** and **demonstrate real-world ML skills**:
+- Predicts U.S. flight delays using real FAA data
+- End-to-end AWS SageMaker ML pipeline (ETL → Training → Deployment → Monitoring)
+- Secure architecture following AWS IAM best practices
+- CI/CD automation with GitHub Actions
+- Includes both batch and real-time prediction
+
 
 
 
@@ -67,3 +75,4 @@ pip install -r requirements.txt
 
 MPLBACKEND=Agg python -m src.evaluate
 
+C

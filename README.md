@@ -19,3 +19,13 @@ pip install -r requirements.txt
 # Run evaluation
 MPLBACKEND=Agg python -m src.evaluate
 
+## 📸 Demo & Screenshots
+
+Below are example outputs and diagrams from the project:
+
+### Model ROC Curve
+![ROC Curve](assets/roc_curve.png)
+
+### Architecture Diagram
+(See diagram above in the Architecture section)
+

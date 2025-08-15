@@ -1,5 +1,6 @@
 cat > README.md <<'EOF'
 # ✈️ Flight Delay Risk — ML to Cloud
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![scikit--learn](https://img.shields.io/badge/scikit--learn-ML-orange) ![AWS-SageMaker](https://img.shields.io/badge/AWS-SageMaker-success) ![MLOps](https://img.shields.io/badge/MLOps-CI%2FCD-green)
 [![CI](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml/badge.svg)](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 A production-grade machine learning project that predicts the probability of U.S. flight delays.  

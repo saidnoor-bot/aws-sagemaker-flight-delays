@@ -24,3 +24,21 @@ flowchart LR
 
 
 ![ROC Curve](assets/roc_curve.png)
+
+## Project structure
+cat > Makefile <<'EOF'
+.PHONY: demo eval clean
+
+demo: ## Create venv, install deps, run evaluation (writes artifacts)
+python -m venv .venv && . .venv/bin/activate && \
+python -m pip install --upgrade pip && \
+pip install -r requirements.txt && \
+MPLBACKEND=Agg python -m src.evaluate
+
+eval: ## Re-run evaluation (refresh metrics + ROC)
+MPLBACKEND=Agg python -m src.evaluate
+
+clean: ## Remove venv and generated artifacts
+rm -rf .venv artifacts/*.png artifacts/*.json __pycache__ */__pycache__
+
+**One-liner to run everything:** `make demo`

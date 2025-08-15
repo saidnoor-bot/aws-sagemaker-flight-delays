@@ -1,16 +1,9 @@
-# Python
-__pycache__/
-*.py[cod]
 .venv/
-.env
-
-# Jupyter
-.ipynb_checkpoints/
-
-# Data
-/data/
-*.csv
-*.parquet
-
-# OS
+__pycache__/
+**/__pycache__/
+*.pyc
+.artifacts/
+artifacts/*.png
+artifacts/*.json
 .DS_Store
+.ipynb_checkpoints/

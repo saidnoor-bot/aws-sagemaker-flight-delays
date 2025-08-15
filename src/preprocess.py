@@ -1,12 +1,17 @@
 from __future__ import annotations
 import pandas as pd
+from typing import Tuple
 
-TARGET_COL = "arr_delay"
+FEATURES = ["dep_delay", "distance"]
+LABEL = "is_late"
 
-def build_features(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
-    y = (df[TARGET_COL] > 15).astype(int)
-    X = df.drop(columns=[TARGET_COL])
-    # One-hot encode categoricals
-    cat_cols = X.select_dtypes(include=["object"]).columns.tolist()
-    X = pd.get_dummies(X, columns=cat_cols, drop_first=True)
+def build_features(df: pd.DataFrame) -> Tuple[pd.DataFrame, pd.Series]:
+    # Ensure required columns exist; light cleanup
+    for col in FEATURES + [LABEL]:
+        if col not in df.columns:
+            raise ValueError(f"Missing column: {col}")
+    X = df[FEATURES].copy()
+    y = df[LABEL].astype(int)
+    # Basic NA handling
+    X = X.fillna(0)
     return X, y

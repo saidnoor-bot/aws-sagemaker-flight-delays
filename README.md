@@ -29,3 +29,17 @@ Below are example outputs and diagrams from the project:
 ### Architecture Diagram
 (See diagram above in the Architecture section)
 
+---
+
+## 🚀 Highlights (for recruiters)
+- End-to-end ML pipeline with clear structure and real evaluation artifacts
+- Batch + realtime paths (AWS SageMaker-ready)
+- CI-ready repo and reproducible local run
+- Clean README with diagrams and screenshots
+
+## 🧰 Tech Stack
+- **Python**: pandas, scikit-learn, matplotlib
+- **ML**: RandomForest, metrics (AUC, Precision, Recall, F1)
+- **Cloud**: AWS SageMaker (deploy-ready), S3, IAM
+- **MLOps**: GitHub Actions (CI), Makefile, artifacts
+

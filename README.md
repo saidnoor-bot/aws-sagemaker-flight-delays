@@ -21,3 +21,5 @@ flowchart LR
   F -->|Batch| G[Batch Inference]
   F -->|Realtime| H[AWS SageMaker Endpoint]
 
+
+![ROC Curve](assets/roc_curve.png)

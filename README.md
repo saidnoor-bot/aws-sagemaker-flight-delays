@@ -169,12 +169,113 @@ git commit -m "docs: add Results section with metrics + ROC"
 git push# 1) Append the Results section to README
 cat >> README.md <<'EOF'
 
+
 ## Results
 | Metric     | Value |
 |-----------:|:-----:|
-| AUC        | $(jq -r '.auc' artifacts/metrics.json) |
-| Precision  | $(jq -r '.precision' artifacts/metrics.json) |
-| Recall     | $(jq -r '.recall' artifacts/metrics.json) |
-| F1         | $(jq -r '.f1' artifacts/metrics.json) |
+| AUC        | `` |
+| Precision  | `` |
+| Recall     | `` |
+| F1         | `` |
 
 ![ROC Curve](artifacts/roc.png)
+
+## Quick Demo
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt || pip install pandas==2.3.1 scikit-learn==1.4.2 matplotlib==3.8.4 PyYAML==6.0.2 joblib==1.3.2
+python -m src.evaluate   # writes artifacts/metrics.json and artifacts/roc.png
+cat > Makefile <<'EOF'
+.PHONY: demo train eval test lint fmt clean
+
+demo: ## Create venv, install deps, run quick evaluation
+python -m venv .venv && . .venv/bin/activate &&
+python -m pip install --upgrade pip &&
+pip install -r requirements.txt || pip install pandas==2.3.1 scikit-learn==1.4.2 matplotlib==3.8.4 PyYAML==6.0.2 joblib==1.3.2 &&
+MPLBACKEND=Agg python -m src.evaluate
+
+train: ## Train baseline model (writes metrics)
+MPLBACKEND=Agg python -m src.train --config config/params.yaml
+
+eval: ## Re-run evaluation (writes ROC plot)
+MPLBACKEND=Agg python -m src.evaluate
+
+test: ## Run unit tests
+pytest -q
+
+lint: ## Lint with flake8
+flake8 src tests
+
+fmt: ## Auto-format with black + isort
+black src tests && isort src tests
+
+clean: ## Remove caches and venv
+rm -rf .venv .pytest_cache **/pycache /pycache artifacts/.png
+# 2) Create Makefile
+cat > Makefile <<'EOF'
+.PHONY: demo train eval test lint fmt clean
+
+demo: ## Create venv, install deps, run quick evaluation
+python -m venv .venv && . .venv/bin/activate && \
+python -m pip install --upgrade pip && \
+pip install -r requirements.txt || pip install pandas==2.3.1 scikit-learn==1.4.2 matplotlib==3.8.4 PyYAML==6.0.2 joblib==1.3.2 && \
+MPLBACKEND=Agg python -m src.evaluate
+
+train: ## Train baseline model (writes metrics)
+MPLBACKEND=Agg python -m src.train --config config/params.yaml
+
+eval: ## Re-run evaluation (writes ROC plot)
+MPLBACKEND=Agg python -m src.evaluate
+
+test: ## Run unit tests
+pytest -q
+
+lint: ## Lint with flake8
+flake8 src tests
+
+fmt: ## Auto-format with black + isort
+black src tests && isort src tests
+
+clean: ## Remove caches and venv
+rm -rf .venv .pytest_cache **/__pycache__ */__pycache__ artifacts/*.png
+
+## Quick Demo
+![Demo GIF](docs/demo.gif)
+
+Run the model locally in just 2 commands:
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt && python -m src.evaluate
+git add README.md
+git commit -m "docs: add Quick Demo and Contributing sections"
+git pushC
+cd ~/flight-project
+
+# Append Quick Demo GIF + Contributing sections to README
+cat >> README.md <<'EOF'
+
+## Quick Demo
+![Demo GIF](docs/demo.gif)
+
+Run the model locally in just 2 commands:
+\`\`\`bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt && python -m src.evaluate
+\`\`\`
+Artifacts will be saved to \`artifacts/\` and metrics printed to the console.
+
+---
+
+## Contributing
+Contributions are welcome!  
+
+1. **Fork** the repo  
+2. **Create** a feature branch (\`git checkout -b feature/my-feature\`)  
+3. **Commit** your changes (\`git commit -m "Add some feature"\`)  
+4. **Push** to the branch (\`git push origin feature/my-feature\`)  
+5. Open a **Pull Request**  
+
+Please ensure:
+- Code is formatted (\`black .\` or \`pre-commit run -a\`)
+- Tests pass (\`pytest -q\`)
+

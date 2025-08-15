@@ -1,9 +1,16 @@
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
 .venv/
-venv/
 .env
-.DS_Store
-.vscode/
+
+# Jupyter
 .ipynb_checkpoints/
-tmp/
+
+# Data
+/data/
+*.csv
+*.parquet
+
+# OS
+.DS_Store

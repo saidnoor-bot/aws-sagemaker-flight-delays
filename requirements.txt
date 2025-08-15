@@ -1,0 +1,12 @@
+boto3
+sagemaker
+pandas
+numpy
+scikit-learn
+pyyaml
+matplotlib
+pytest
+flake8
+black
+isort
+pre-commit

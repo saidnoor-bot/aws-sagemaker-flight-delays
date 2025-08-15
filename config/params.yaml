@@ -1,0 +1,17 @@
+random_state: 42
+sample_rows: 5000
+features:
+  - dep_delay
+  - arr_delay
+  - distance
+  - carrier
+  - origin
+  - dest
+  - month
+  - day_of_week
+  - is_holiday
+model:
+  type: RandomForestClassifier
+  params:
+    n_estimators: 120
+    max_depth: 10

@@ -1,6 +1,9 @@
-# ✈️ Flight Delay Risk — ML to Cloud
 
-[![CI](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml/badge.svg)](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml)  
+# ✈️ Flight Delay Risk — ML to Cloud
+[![CI](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml/badge.svg)](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange) ![AWS SageMaker](https://img.shields.io/badge/AWS--SageMaker-success) ![MLOps](https://img.shields.io/badge/MLOps-CI%2FCD-green)
+
+
+  
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)  
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)  
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange)  

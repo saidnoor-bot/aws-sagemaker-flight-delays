@@ -1,11 +1,17 @@
-# ✈️ Flight Delay Risk — ML to Cloud
+cat > README.md <<'EOF'
+# ✈️ Flight Delay Risk — ML to Cloud  
+[![CI](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml/badge.svg)](https://github.com/saidnoor-bot/aws-sagemaker-flight-delays/actions/workflows/ci.yml) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Python](https://img.shields.io/badge/Python-3.11-blue.svg) ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4.2-lightgrey.svg) ![AWS SageMaker](https://img.shields.io/badge/AWS-SageMaker-orange.svg)
 
-## 📌 Project Overview
-This project takes a Machine Learning model from concept to deployment (cloud-friendly).
-It predicts whether a U.S. domestic flight will arrive late using historical flight and route features.
+A clean, recruiter-ready ML portfolio project that predicts U.S. flight delay risk.  
+Built for clarity, reproducibility, and **AWS-ready MLOps**.
 
-**Business Relevance:** Airlines/logistics/travel apps can use this to optimize ops & customer experience.  
-**Engineering Focus:** Maintainability, automation, and scalability.
+---
+
+## 🧠 Why it matters
+- **Business impact:** Airlines/logistics can reduce delays & improve customer satisfaction.
+- **Engineering value:** Demonstrates modeling, evaluation, automation, and cloud deployment.
+
+---
 
 ## 🏗 Architecture
 ```mermaid
@@ -17,33 +23,4 @@ flowchart LR
   E --> F{Deploy?}
   F -->|Batch| G[Batch Inference]
   F -->|Realtime| H[SageMaker Endpoint]
-```
 
-## ✅ Results (local quick run)
-| Metric     | Value |
-|-----------:|:-----:|
-| AUC        | 1.0 |
-| Precision  | 1.0 |
-| Recall     | 1.0 |
-| F1         | 1.0  |
-
-![ROC Curve](artifacts/roc.png)
-
-## 🚀 Quick Demo
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-python -m src.evaluate
-```
-
-Artifacts are saved to `artifacts/` and metrics printed to console.
-
-## 🔧 Dev Helpers
-Make targets:
-```bash
-make demo     # venv + install + evaluate (writes artifacts)
-make eval     # re-run evaluation only
-make clean    # clean caches/venv/artifacts
-```
-
----

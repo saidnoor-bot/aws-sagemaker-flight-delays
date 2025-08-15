@@ -46,3 +46,17 @@ Below are example outputs and diagrams from the project:
 - **Cloud**: AWS SageMaker (deploy-ready), S3, IAM
 - **MLOps**: GitHub Actions (CI), Makefile, artifacts
 
+## 🚀 Quick Start
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/saidnoor-bot/aws-sagemaker-flight-delays.git
+   cd aws-sagemaker-flight-delays
+
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
+MPLBACKEND=Agg python -m src.evaluate
+

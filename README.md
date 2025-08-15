@@ -78,4 +78,16 @@ pip install -r requirements.txt
 
 MPLBACKEND=Agg python -m src.evaluate
 
-C
+## 🚀 Quickstart
+
+1. **Clone the repo**  
+```bash
+git clone https://github.com/saidnoor-bot/aws-sagemaker-flight-delays.git
+cd aws-sagemaker-flight-delays
+
+python -m venv .venv && source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+
+MPLBACKEND=Agg python -m src.evaluate
+
